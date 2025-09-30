@@ -13,8 +13,10 @@ function StudentList({students}) {
                     <th>삭제</th>
                 </tr>
             </thead>
-            <tbody>
-              <StudentItem />
+            <tbody>                
+                {students.map((student) =>(
+                    <StudentItem key={student.id} student={student} />
+                ))}                         
             </tbody>
         </table>
     );

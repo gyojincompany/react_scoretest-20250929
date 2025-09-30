@@ -9,15 +9,19 @@ function StudentInput({onCreateStudent}) {
 
     function onChangeName(e) {
         setName(e.target.value);
+        console.log(name);
     }
     function onChangeMath(e) {
         setMath(e.target.value);
+        console.log(math);
     }
     function onChangeEng(e) {
         setEng(e.target.value);
+        console.log(eng);
     }
     function onChangeSci(e) {
         setSci(e.target.value);
+        console.log(sci);
     }
 
     function addStudent(name, math, eng, sci) {

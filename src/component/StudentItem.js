@@ -1,11 +1,11 @@
-function StudentItem() {
+function StudentItem({student}) {
     return (
         <tr className="StudentItem">
-            <td>{name}</td>
-            <td>{math}</td>
-            <td>{eng}</td>
-            <td>{sci}</td>
-            <td>{avg}</td>
+            <td>{student.name}</td>
+            <td>{student.math}</td>
+            <td>{student.eng}</td>
+            <td>{student.sci}</td>
+            <td>{student.avg}</td>
             <td>
                 <button>삭제</button>
             </td>

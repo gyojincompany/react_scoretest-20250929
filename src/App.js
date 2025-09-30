@@ -11,10 +11,10 @@ function App() {
   const idRef = useRef(0);
 
   function onCreateStudent(name, math, eng, sci) {
-    if (!name || !math || !eng || !sci) { //참이면 4개의 입력값중 1개라도 공백 발생
-      alert("이름과 모든 과목의 점수는 필수입력사항 입니다.");
-      return;
-    }
+    // if (!name || !math || !eng || !sci) { //참이면 4개의 입력값중 1개라도 공백 발생
+    //   alert("이름과 모든 과목의 점수는 필수입력사항 입니다.");
+    //   return;
+    // }
 
     const avg = ((Number(math) + Number(eng) + Number(sci))/3).toFixed(2);
     //소수점 2자리까지만 저장
@@ -30,7 +30,7 @@ function App() {
 
     setStudents([...students, newStudent]); //최신 학생을 뒤에 추가
     idRef.current += 1; //id값은 0부터 시작 1씩 늘어나게 저장
-  }
+  };
 
 
   return (
