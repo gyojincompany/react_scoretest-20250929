@@ -1,4 +1,5 @@
 import StudentItem from "./StudentItem";
+import "./StudentList.css"
 
 function StudentList({students, onDelete}) {
     return (

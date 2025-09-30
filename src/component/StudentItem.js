@@ -1,3 +1,5 @@
+import "./StudentItem.css"
+
 function StudentItem({student, onDelete}) {
     function deleteStudent() {
         onDelete(student.id);
