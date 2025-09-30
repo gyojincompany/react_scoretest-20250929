@@ -8,23 +8,19 @@ function StudentInput({onCreateStudent}) {
     const [sci, setSci] = useState("");
 
     function onChangeName(e) {
-        setName(e.target.value);
-        console.log(name);
+        setName(e.target.value);      
     }
     function onChangeMath(e) {
-        setMath(e.target.value);
-        console.log(math);
+        setMath(e.target.value);      
     }
     function onChangeEng(e) {
-        setEng(e.target.value);
-        console.log(eng);
+        setEng(e.target.value);       
     }
     function onChangeSci(e) {
-        setSci(e.target.value);
-        console.log(sci);
+        setSci(e.target.value);      
     }
 
-    function addStudent(name, math, eng, sci) {
+    function addStudent() {
         onCreateStudent(name, math, eng, sci); 
         //부모 App에서 받아온 함수 호출->부모 App에게 유저가 입력한 
         //name, math, eng, sci를 전달

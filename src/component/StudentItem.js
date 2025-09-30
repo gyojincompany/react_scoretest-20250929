@@ -1,4 +1,7 @@
-function StudentItem({student}) {
+function StudentItem({student, onDelete}) {
+    function deleteStudent() {
+        onDelete(student.id);
+    }
     return (
         <tr className="StudentItem">
             <td>{student.name}</td>
@@ -7,7 +10,7 @@ function StudentItem({student}) {
             <td>{student.sci}</td>
             <td>{student.avg}</td>
             <td>
-                <button>삭제</button>
+                <button onClick={deleteStudent}>삭제</button>
             </td>
         </tr>
     );

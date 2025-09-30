@@ -1,6 +1,6 @@
 import StudentItem from "./StudentItem";
 
-function StudentList({students}) {
+function StudentList({students, onDelete}) {
     return (
         <table className="StudentList">
             <thead>
@@ -15,7 +15,7 @@ function StudentList({students}) {
             </thead>
             <tbody>                
                 {students.map((student) =>(
-                    <StudentItem key={student.id} student={student} />
+                    <StudentItem key={student.id} student={student} onDelete={onDelete} />
                 ))}                         
             </tbody>
         </table>

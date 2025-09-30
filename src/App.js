@@ -32,12 +32,17 @@ function App() {
     idRef.current += 1; //id값은 0부터 시작 1씩 늘어나게 저장
   };
 
+  function deleteStudent(id) {
+    setStudents( //학생을 삭제한 결과를 반영
+      students.filter((student)=>(student.id !== id))
+    );
+  }
 
   return (
     <div className="App">
       <h2>학생 성적 관리</h2>
       <StudentInput onCreateStudent={onCreateStudent} />
-      <StudentList students={students} />
+      <StudentList students={students} onDelete={deleteStudent} />
     </div>
   );
 }
